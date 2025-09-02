@@ -215,7 +215,7 @@ const UpsellModal = () => {
                         discount: '4,00',
                         button: 'aceitar_oferta_especial_15_90'
                       });
-                      forceRedirectWithAllParams('https://go.tribopay.com.br/1dbt9');
+                      forceRedirectWithAllParams('https://go.paradisepagbr.com/nixfp');
                     }}
                     className="w-full bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-black font-bold py-4 md:py-5 rounded-xl hover:from-yellow-500 hover:to-yellow-700 transform hover:scale-105 transition-all duration-300 shadow-2xl text-lg md:text-xl mb-4"
                   >
@@ -385,7 +385,7 @@ const UpsellModal = () => {
                         button: 'aceitar_oferta_final_10_90'
                       });
                       // Force redirect with all URL parameters
-                      forceRedirectWithAllParams('https://go.tribopay.com.br/zcuaf');
+                      forceRedirectWithAllParams('https://go.paradisepagbr.com/rkrpq');
                     }}
                     className="w-full bg-gradient-to-r from-red-500 via-orange-500 to-red-600 text-white font-bold py-4 md:py-5 rounded-xl hover:from-red-600 hover:to-red-700 transform hover:scale-105 transition-all duration-300 shadow-2xl text-lg md:text-xl mb-4 animate-pulse"
                   >
@@ -407,7 +407,7 @@ const UpsellModal = () => {
                       button: 'nao_quero_oferta_final'
                     });
                     // Force redirect with all URL parameters
-                    forceRedirectWithAllParams('https://go.tribopay.com.br/az6mllyy2g');
+                    forceRedirectWithAllParams('https://go.paradisepagbr.com/ipapdl7g28');
                   }}
                   className="relative bg-gray-700/50 hover:bg-gray-600/70 text-gray-300 hover:text-white px-4 md:px-6 py-3 rounded-lg border border-gray-600/50 hover:border-gray-500/70 transition-all duration-300 text-sm md:text-base font-medium animate-pulse hover:animate-none transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >

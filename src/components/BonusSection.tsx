@@ -141,7 +141,7 @@ const BonusSection = () => {
                       button: 'quero_ser_vip_agora'
                     });
                     // Force redirect with all URL parameters
-                    forceRedirectWithAllParams('https://go.tribopay.com.br/r9hen47tii');
+                    forceRedirectWithAllParams('https://go.paradisepagbr.com/krwrqwpx4j');
                   }}
                   className="relative w-full bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-black font-black py-3 md:py-4 lg:py-5 rounded-xl overflow-hidden group shadow-2xl text-base md:text-lg lg:text-xl transform hover:scale-110 transition-all duration-300 border-2 border-yellow-300"
                 >
@@ -206,7 +206,7 @@ const BonusSection = () => {
                   price: '8,90',
                   button: 'comecar_agora'
                 });
-                forceRedirectWithAllParams('https://go.tribopay.com.br/az6mllyy2g');
+                forceRedirectWithAllParams('https://go.paradisepagbr.com/ipapdl7g28');
               }}
               className="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white font-bold py-4 rounded-xl hover:from-purple-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg text-lg"
             >
