@@ -134,8 +134,8 @@ const PricingSection = () => {
                     });
                     // Redirect to appropriate checkout
                     const checkoutUrl = plan.name === 'Plano Premium' 
-                      ? 'https://checkout.exemplo.com/premium'
-                      : 'https://checkout.exemplo.com/vitalicio';
+                      ? 'https://pay.kirvano.com/c5d26cdc-18b9-40ef-af71-04b541f4a2ee'
+                      : 'https://pay.kirvano.com/c5d26cdc-18b9-40ef-af71-04b541f4a2ee';
                     redirectWithParams(checkoutUrl);
                   }
                 }}
