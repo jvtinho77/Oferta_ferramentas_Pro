@@ -4,6 +4,7 @@ import NotificationSystem from './components/NotificationSystem';
 import ToolsSection from './components/ToolsSection';
 import ExclusiveBonusSection from './components/ExclusiveBonusSection';
 import BonusSection from './components/BonusSection';
+import PricingSection from './components/PricingSection';
 import ThreeStepsSection from './components/ThreeStepsSection';
 import TestimonialsSection from './components/TestimonialsSection';
 import FAQSection from './components/FAQSection';
@@ -27,6 +28,7 @@ function App() {
       <ToolsSection />
       <ExclusiveBonusSection />
       <BonusSection />
+      <PricingSection />
       <ThreeStepsSection />
       <TestimonialsSection />
       <FAQSection />
