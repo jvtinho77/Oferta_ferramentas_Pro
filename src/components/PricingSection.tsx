@@ -124,6 +124,7 @@ const PricingSection = () => {
                       price: plan.price,
                       button: 'escolher_plano'
                     });
+                    console.log('PricingSection: Disparando evento showUpsell para Plano Básico');
                     const event = new CustomEvent('showUpsell');
                     window.dispatchEvent(event);
                   } else {

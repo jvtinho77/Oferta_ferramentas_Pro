@@ -10,6 +10,7 @@ const UpsellModal = () => {
 
   useEffect(() => {
     const handleShowUpsell = () => {
+      console.log('UpsellModal: Evento showUpsell recebido');
       setIsVisible(true);
       setCurrentStage('first');
       setTimeLeft(300); // Reset timer
@@ -72,6 +73,7 @@ const UpsellModal = () => {
     }, 100);
   };
 
+  console.log('UpsellModal renderizando - isVisible:', isVisible, 'currentStage:', currentStage);
   if (!isVisible) return null;
 
   return (
