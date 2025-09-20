@@ -37,6 +37,25 @@ const PricingSection = () => {
       color: 'from-yellow-500 to-yellow-600'
     },
     {
+      name: 'Plano Master',
+      price: '27,00',
+      originalPrice: '67,00',
+      duration: 'mês',
+      description: 'O plano mais completo - Para profissionais',
+      features: [
+        'Tudo do Plano Premium',
+        'Voz infinita (Vo3)',
+        'IA que cria conteúdo infinito',
+        'Gerencia 10+ contas no TikTok',
+        'Gerencia 10+ contas no YouTube',
+        'Suporte VIP 24/7',
+        'Garantia de 7 dias',
+        'Atualizações em tempo real'
+      ],
+      popular: false,
+      color: 'from-red-500 to-red-600'
+    },
+    {
       name: 'Plano Vitalício',
       price: '197,00',
       originalPrice: '497,00',
@@ -68,7 +87,7 @@ const PricingSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {plans.map((plan, index) => (
             <div 
               key={index}
@@ -135,6 +154,8 @@ const PricingSection = () => {
                     // Redirect to appropriate checkout
                     const checkoutUrl = plan.name === 'Plano Premium' 
                       ? 'https://pay.cakto.com.br/6krzq2x_576786'
+                      : plan.name === 'Plano Master'
+                      ? 'https://pay.cakto.com.br/urr9shv_576799'
                       : 'https://pay.cakto.com.br/7vgradj_576782';
                     redirectWithParams(checkoutUrl);
                   }
