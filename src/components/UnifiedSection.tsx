@@ -270,7 +270,7 @@ const UnifiedSection = () => {
       button: 'aceitar_upsell'
     });
     setShowUpsell(false);
-    const checkoutUrl = 'https://pay.kirvano.com/c5d26cdc-18b9-40ef-af71-04b541f4a2ee';
+    const checkoutUrl = 'https://pay.cakto.com.br/3bf25md';
     redirectWithParams(checkoutUrl);
   };
 
@@ -292,7 +292,7 @@ const UnifiedSection = () => {
       button: 'aceitar_downsell'
     });
     setShowDownsell(false);
-    const checkoutUrl = 'https://pay.kirvano.com/c5d26cdc-18b9-40ef-af71-04b541f4a2ee';
+    const checkoutUrl = 'https://pay.cakto.com.br/nkhh58c';
     redirectWithParams(checkoutUrl);
   };
 
@@ -540,10 +540,10 @@ const UnifiedSection = () => {
                          button: 'escolher_plano'
                        });
                        const checkoutUrl = plan.name === 'Plano Intermediário' 
-                         ? 'https://pay.kirvano.com/c5d26cdc-18b9-40ef-af71-04b541f4a2ee'
+                         ? 'https://pay.cakto.com.br/6krzq2x_576786'
                          : plan.name === 'Plano Master'
-                         ? 'https://pay.kirvano.com/c5d26cdc-18b9-40ef-af71-04b541f4a2ee'
-                         : 'https://pay.kirvano.com/c5d26cdc-18b9-40ef-af71-04b541f4a2ee';
+                         ? 'https://pay.cakto.com.br/urr9shv_576799'
+                         : 'https://pay.cakto.com.br/7vgradj_576782';
                        redirectWithParams(checkoutUrl);
                      }
                    }}

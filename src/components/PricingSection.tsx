@@ -175,10 +175,10 @@ const PricingSection = () => {
                     });
                     // Redirect to appropriate checkout
                     const checkoutUrl = plan.name === 'Plano Intermediário' 
-                      ? 'https://pay.kirvano.com/c5d26cdc-18b9-40ef-af71-04b541f4a2ee'
+                      ? 'https://pay.cakto.com.br/6krzq2x_576786'
                       : plan.name === 'Plano Master'
-                      ? 'https://pay.kirvano.com/c5d26cdc-18b9-40ef-af71-04b541f4a2ee'
-                      : 'https://pay.kirvano.com/c5d26cdc-18b9-40ef-af71-04b541f4a2ee';
+                      ? 'https://pay.cakto.com.br/urr9shv_576799'
+                      : 'https://pay.cakto.com.br/7vgradj_576782';
                     redirectWithParams(checkoutUrl);
                   }
                 }}

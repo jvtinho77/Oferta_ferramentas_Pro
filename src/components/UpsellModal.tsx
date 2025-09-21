@@ -235,7 +235,7 @@ const UpsellModal = () => {
                         discount: '4,00',
                         button: 'aceitar_oferta_especial_15_90'
                       });
-                      forceRedirectWithAllParams('https://pay.cakto.com.br/a5dqhh6');
+                      forceRedirectWithAllParams('https://pay.cakto.com.br/3bf25md');
                     }}
                     className="w-full bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-black font-bold py-4 md:py-5 rounded-xl hover:from-yellow-500 hover:to-yellow-700 transform hover:scale-105 transition-all duration-300 shadow-2xl text-lg md:text-xl mb-4"
                   >
@@ -405,7 +405,7 @@ const UpsellModal = () => {
                         button: 'aceitar_oferta_final_10_90'
                       });
                       // Force redirect with all URL parameters
-                      forceRedirectWithAllParams('https://pay.cakto.com.br/3cu7kse');
+                      forceRedirectWithAllParams('https://pay.cakto.com.br/nkhh58c');
                     }}
                     className="w-full bg-gradient-to-r from-red-500 via-orange-500 to-red-600 text-white font-bold py-4 md:py-5 rounded-xl hover:from-red-600 hover:to-red-700 transform hover:scale-105 transition-all duration-300 shadow-2xl text-lg md:text-xl mb-4 animate-pulse"
                   >
