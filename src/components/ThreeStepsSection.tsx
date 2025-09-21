@@ -22,10 +22,10 @@ const ThreeStepsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-purple-900 via-purple-800 to-purple-900">
+    <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+          <h2 className="text-4xl md:text-5xl font-light text-white mb-8">
             Apenas 3 passos
           </h2>
         </div>
@@ -39,12 +39,12 @@ const ThreeStepsSection = () => {
               >
                 {/* Icon Container */}
                 <div className="relative mb-8">
-                  <div className="w-24 h-24 mx-auto bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-white/20 group-hover:border-white/40 transition-all duration-300">
-                    <step.icon className="w-12 h-12 text-white" strokeWidth={1.5} />
+                  <div className="w-24 h-24 mx-auto bg-white rounded-full flex items-center justify-center border-2 border-gray-200 shadow-lg group-hover:border-blue-300 transition-all duration-300">
+                    <step.icon className="w-12 h-12 text-blue-600" strokeWidth={1.5} />
                   </div>
                   
                   {/* Step number */}
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center text-black font-bold text-sm">
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold text-sm shadow-lg">
                     {index + 1}
                   </div>
                 </div>
@@ -61,7 +61,7 @@ const ThreeStepsSection = () => {
 
                 {/* Connector line (hidden on last item) */}
                 {index < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-12 left-1/2 w-full h-0.5 bg-gradient-to-r from-white/20 to-transparent transform translate-x-12 -translate-y-1/2"></div>
+                  <div className="hidden md:block absolute top-12 left-1/2 w-full h-0.5 bg-gradient-to-r from-gray-300 to-transparent transform translate-x-12 -translate-y-1/2"></div>
                 )}
               </div>
             ))}
@@ -78,12 +78,12 @@ const ThreeStepsSection = () => {
                 element.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-bold text-xl px-12 py-4 rounded-full hover:from-yellow-500 hover:to-yellow-700 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-yellow-500/25"
+            className="bg-blue-600 text-white font-semibold text-xl px-12 py-4 rounded-full hover:bg-blue-700 transition-colors duration-300 shadow-lg"
           >
-            QUERO MEU ACESSO AGORA! 🚀
+            QUERO MEU ACESSO AGORA!
           </button>
           
-          <div className="mt-4 flex items-center justify-center gap-2 text-sm text-purple-200">
+          <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-300">
             <Shield className="w-4 h-4" />
             <span>Compra 100% segura • Garantia de 7 dias</span>
           </div>

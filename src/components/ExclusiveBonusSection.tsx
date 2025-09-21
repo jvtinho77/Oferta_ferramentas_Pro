@@ -4,20 +4,20 @@ import { trackUTMifyEvent } from '../utils/urlUtils';
 
 const ExclusiveBonusSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-black to-purple-900">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-6 py-3 rounded-full font-bold text-lg mb-6 animate-pulse">
+          <div className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full font-semibold text-lg mb-6 shadow-lg">
             <Gift className="w-5 h-5" />
             BÔNUS EXCLUSIVO
             <Gift className="w-5 h-5" />
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6">
             Plataformas Premium Incluídas
           </h2>
           
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Acesse as principais plataformas de streaming e entretenimento sem pagar nada extra!
           </p>
         </div>
@@ -25,53 +25,49 @@ const ExclusiveBonusSection = () => {
         {/* Premium Platforms Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
           {/* Netflix */}
-          <div className="group relative bg-black/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-red-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-red-500/20">
-            <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="group relative bg-white rounded-2xl p-6 border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
             <img 
               src="/images/bonus/netflix.webp"
               alt="Netflix Premium"
-              className="w-full h-auto rounded-lg relative z-10"
+              className="w-full h-auto rounded-lg"
             />
-            <div className="absolute -top-2 -right-2 bg-gradient-to-r from-red-500 to-red-600 text-white text-xs font-bold px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-medium px-2 py-1 rounded-full shadow-lg">
               PREMIUM
             </div>
           </div>
           
           {/* Spotify Premium */}
-          <div className="group relative bg-green-500/10 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-green-400/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20">
-            <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="group relative bg-white rounded-2xl p-6 border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
             <img 
               src="/images/bonus/spotify-premium.webp"
               alt="Spotify Premium"
-              className="w-full h-auto rounded-lg relative z-10"
+              className="w-full h-auto rounded-lg"
             />
-            <div className="absolute -top-2 -right-2 bg-gradient-to-r from-green-500 to-green-600 text-white text-xs font-bold px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="absolute -top-2 -right-2 bg-green-600 text-white text-xs font-medium px-2 py-1 rounded-full shadow-lg">
               PREMIUM
             </div>
           </div>
           
           {/* YouTube Premium */}
-          <div className="group relative bg-red-500/10 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-red-400/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-red-500/20">
-            <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="group relative bg-white rounded-2xl p-6 border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
             <img 
               src="/images/bonus/youtube-premium.webp"
               alt="YouTube Premium"
-              className="w-full h-auto rounded-lg relative z-10"
+              className="w-full h-auto rounded-lg"
             />
-            <div className="absolute -top-2 -right-2 bg-gradient-to-r from-red-500 to-red-600 text-white text-xs font-bold px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-medium px-2 py-1 rounded-full shadow-lg">
               PREMIUM
             </div>
           </div>
           
           {/* Disney+ */}
-          <div className="group relative bg-blue-600/10 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="group relative bg-white rounded-2xl p-6 border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
             <img 
               src="/images/bonus/disney-plus.webp"
               alt="Disney Plus"
-              className="w-full h-auto rounded-lg relative z-10"
+              className="w-full h-auto rounded-lg"
             />
-            <div className="absolute -top-2 -right-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white text-xs font-bold px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs font-medium px-2 py-1 rounded-full shadow-lg">
               PREMIUM
             </div>
           </div>
@@ -79,35 +75,35 @@ const ExclusiveBonusSection = () => {
 
         {/* Value Proposition */}
         <div className="text-center mb-12">
-          <div className="bg-gradient-to-r from-purple-800/30 to-purple-900/30 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto border border-purple-600/30">
+          <div className="bg-gray-50 rounded-2xl p-8 max-w-4xl mx-auto border border-gray-200">
             <div className="flex items-center justify-center gap-2 mb-4">
-              <Crown className="w-6 h-6 text-yellow-400" />
-              <h3 className="text-2xl font-bold text-white">E muito mais!</h3>
-              <Crown className="w-6 h-6 text-yellow-400" />
+              <Crown className="w-6 h-6 text-blue-600" />
+              <h3 className="text-2xl font-semibold text-gray-900">E muito mais!</h3>
+              <Crown className="w-6 h-6 text-blue-600" />
             </div>
             
-            <p className="text-lg text-gray-300 mb-6">
-              Mais de <span className="text-yellow-400 font-bold">500 plataformas premium</span> disponíveis em um único lugar
+            <p className="text-lg text-gray-600 mb-6">
+              Mais de <span className="text-blue-600 font-semibold">500 plataformas premium</span> disponíveis em um único lugar
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-              <div className="flex items-center justify-center gap-2 text-green-400">
+              <div className="flex items-center justify-center gap-2 text-green-600">
                 <Star className="w-5 h-5 fill-current" />
                 <span className="font-medium">Acesso Vitalício</span>
               </div>
-              <div className="flex items-center justify-center gap-2 text-blue-400">
+              <div className="flex items-center justify-center gap-2 text-blue-600">
                 <Star className="w-5 h-5 fill-current" />
                 <span className="font-medium">Suporte 24/7</span>
               </div>
-              <div className="flex items-center justify-center gap-2 text-purple-400">
+              <div className="flex items-center justify-center gap-2 text-gray-600">
                 <Star className="w-5 h-5 fill-current" />
                 <span className="font-medium">Garantia Total</span>
               </div>
             </div>
             
-            <div className="bg-gradient-to-r from-green-500/20 to-green-600/20 border border-green-500/30 rounded-xl p-4">
-              <p className="text-green-300 font-medium">
-                💰 Economize mais de R$ 150 por mês em assinaturas!
+            <div className="bg-green-50 border border-green-200 rounded-xl p-4">
+              <p className="text-green-700 font-medium">
+                Economize mais de R$ 150 por mês em assinaturas!
               </p>
             </div>
           </div>
@@ -123,12 +119,12 @@ const ExclusiveBonusSection = () => {
                 element.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-bold text-xl px-12 py-4 rounded-full hover:from-yellow-500 hover:to-yellow-700 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-yellow-500/25"
+            className="bg-blue-600 text-white font-semibold text-xl px-12 py-4 rounded-full hover:bg-blue-700 transition-colors duration-300 shadow-lg"
           >
-            🎁 QUERO ESSES BÔNUS AGORA!
+            QUERO ESSES BÔNUS AGORA!
           </button>
           
-          <p className="text-gray-400 text-sm mt-4">
+          <p className="text-gray-500 text-sm mt-4">
             Oferta por tempo limitado • Garantia de 7 dias
           </p>
         </div>

@@ -1,13 +1,5 @@
 import React, { useEffect } from 'react';
-import Header from './components/Header';
-import NotificationSystem from './components/NotificationSystem';
-import ToolsSection from './components/ToolsSection';
-import ExclusiveBonusSection from './components/ExclusiveBonusSection';
-import BonusSection from './components/BonusSection';
-import PricingSection from './components/PricingSection';
-import ThreeStepsSection from './components/ThreeStepsSection';
-import TestimonialsSection from './components/TestimonialsSection';
-import FAQSection from './components/FAQSection';
+import UnifiedSection from './components/UnifiedSection';
 import UpsellModal from './components/UpsellModal';
 import { trackUTMifyEvent, getCurrentUrlParams } from './utils/urlUtils';
 
@@ -23,15 +15,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-black overflow-x-hidden">
-      <Header />
-      <NotificationSystem />
-      <ToolsSection />
-      <ExclusiveBonusSection />
-      <BonusSection />
-      <PricingSection />
-      <ThreeStepsSection />
-      <TestimonialsSection />
-      <FAQSection />
+      <UnifiedSection />
       <UpsellModal />
     </div>
   );

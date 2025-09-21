@@ -97,7 +97,7 @@ const TestimonialsSection = () => {
     <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-light text-white mb-6">
             O que dizem nossos clientes
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -110,10 +110,10 @@ const TestimonialsSection = () => {
           {realTestimonials.map((testimonial) => (
             <div 
               key={testimonial.id}
-              className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl p-6 border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:transform hover:scale-105 shadow-xl"
+              className="bg-white rounded-2xl p-6 border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
             >
               {/* Customer Profile */}
-              <div className="flex items-center gap-3 mb-4 pb-4 border-b border-gray-700/50">
+              <div className="flex items-center gap-3 mb-4 pb-4 border-b border-gray-200">
                 <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
                   <img 
                     src={testimonial.profileImage}
@@ -123,15 +123,15 @@ const TestimonialsSection = () => {
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-1">
-                    <h4 className="font-semibold text-white text-sm">{testimonial.name}</h4>
+                    <h4 className="font-semibold text-gray-900 text-sm">{testimonial.name}</h4>
                     {testimonial.verified && (
-                      <Verified className="w-4 h-4 text-blue-500" />
+                      <Verified className="w-4 h-4 text-blue-600" />
                     )}
                   </div>
-                  <p className="text-xs text-gray-400">{testimonial.location}</p>
+                  <p className="text-xs text-gray-500">{testimonial.location}</p>
                   <div className="flex items-center gap-1 mt-1">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-3 h-3 text-yellow-400 fill-current" />
+                      <Star key={i} className="w-3 h-3 text-yellow-500 fill-current" />
                     ))}
                   </div>
                 </div>
@@ -139,14 +139,14 @@ const TestimonialsSection = () => {
 
               {/* Testimonial Text */}
               <div className="mb-4">
-                <p className="text-gray-300 text-sm leading-relaxed italic">
+                <p className="text-gray-600 text-sm leading-relaxed italic">
                   "{testimonial.testimonial}"
                 </p>
               </div>
 
               {/* WhatsApp Screenshot */}
               <div className="relative">
-                <div className="bg-gray-700 rounded-xl p-2 mb-3">
+                <div className="bg-gray-100 rounded-xl p-2 mb-3">
                   <img 
                     src={testimonial.whatsappImage}
                     alt={`Conversa WhatsApp de ${testimonial.name}`}
@@ -162,8 +162,8 @@ const TestimonialsSection = () => {
               </div>
 
               {/* Verification badge */}
-              <div className="flex items-center justify-center gap-2 text-green-400 text-xs">
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <div className="flex items-center justify-center gap-2 text-green-600 text-xs">
+                <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse"></div>
                 <span>Cliente Verificado</span>
               </div>
             </div>
@@ -187,9 +187,9 @@ const TestimonialsSection = () => {
                   key={testimonial.id}
                   className="w-full flex-shrink-0 px-4"
                 >
-                  <div className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl p-6 border border-gray-700/50 shadow-xl">
+                  <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-lg">
                     {/* Customer Profile */}
-                    <div className="flex items-center gap-3 mb-4 pb-4 border-b border-gray-700/50">
+                    <div className="flex items-center gap-3 mb-4 pb-4 border-b border-gray-200">
                       <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
                         <img 
                           src={testimonial.profileImage}
@@ -199,15 +199,15 @@ const TestimonialsSection = () => {
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
-                          <h4 className="font-semibold text-white">{testimonial.name}</h4>
+                          <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
                           {testimonial.verified && (
-                            <Verified className="w-5 h-5 text-blue-500" />
+                            <Verified className="w-5 h-5 text-blue-600" />
                           )}
                         </div>
-                        <p className="text-sm text-gray-400">{testimonial.location}</p>
+                        <p className="text-sm text-gray-500">{testimonial.location}</p>
                         <div className="flex items-center gap-1 mt-1">
                           {[...Array(testimonial.rating)].map((_, i) => (
-                            <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                            <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
                           ))}
                         </div>
                       </div>
@@ -215,14 +215,14 @@ const TestimonialsSection = () => {
 
                     {/* Testimonial Text */}
                     <div className="mb-4">
-                      <p className="text-gray-300 leading-relaxed italic">
+                      <p className="text-gray-600 leading-relaxed italic">
                         "{testimonial.testimonial}"
                       </p>
                     </div>
 
                     {/* WhatsApp Screenshot */}
                     <div className="relative">
-                      <div className="bg-gray-700 rounded-xl p-2 mb-3">
+                      <div className="bg-gray-100 rounded-xl p-2 mb-3">
                         <img 
                           src={testimonial.whatsappImage}
                           alt={`Conversa WhatsApp de ${testimonial.name}`}
@@ -237,8 +237,8 @@ const TestimonialsSection = () => {
                     </div>
 
                     {/* Verification badge */}
-                    <div className="flex items-center justify-center gap-2 text-green-400 text-sm">
-                      <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    <div className="flex items-center justify-center gap-2 text-green-600 text-sm">
+                      <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse"></div>
                       <span>Cliente Verificado</span>
                     </div>
                   </div>
@@ -250,14 +250,14 @@ const TestimonialsSection = () => {
           {/* Navigation Arrows */}
           <button
             onClick={goToPrevious}
-            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 backdrop-blur-sm text-white p-3 rounded-full hover:bg-black/70 transition-all duration-200 z-10"
+            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm text-gray-900 p-3 rounded-full hover:bg-white transition-all duration-200 z-10 shadow-lg"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
 
           <button
             onClick={goToNext}
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 backdrop-blur-sm text-white p-3 rounded-full hover:bg-black/70 transition-all duration-200 z-10"
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm text-gray-900 p-3 rounded-full hover:bg-white transition-all duration-200 z-10 shadow-lg"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
@@ -270,8 +270,8 @@ const TestimonialsSection = () => {
                 onClick={() => goToSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-200 ${
                   index === currentIndex 
-                    ? 'bg-green-500 scale-110' 
-                    : 'bg-gray-600 hover:bg-gray-500'
+                    ? 'bg-blue-600 scale-110' 
+                    : 'bg-gray-300 hover:bg-gray-400'
                 }`}
               />
             ))}
@@ -279,8 +279,8 @@ const TestimonialsSection = () => {
 
           {/* Auto-play indicator */}
           <div className="flex justify-center mt-4">
-            <div className="flex items-center gap-2 text-xs text-gray-400">
-              <div className={`w-2 h-2 rounded-full ${isAutoPlaying ? 'bg-green-500 animate-pulse' : 'bg-gray-500'}`}></div>
+            <div className="flex items-center gap-2 text-xs text-gray-500">
+              <div className={`w-2 h-2 rounded-full ${isAutoPlaying ? 'bg-blue-600 animate-pulse' : 'bg-gray-400'}`}></div>
               <span>{isAutoPlaying ? 'Reprodução automática' : 'Pausado'}</span>
             </div>
           </div>
@@ -289,25 +289,25 @@ const TestimonialsSection = () => {
         {/* Trust Indicators */}
         <div className="text-center mt-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
-            <div className="flex items-center justify-center gap-3 text-green-400">
+            <div className="flex items-center justify-center gap-3 text-green-600">
               <Verified className="w-6 h-6" />
               <span className="font-medium">Clientes Verificados</span>
             </div>
-            <div className="flex items-center justify-center gap-3 text-yellow-400">
+            <div className="flex items-center justify-center gap-3 text-yellow-500">
               <Star className="w-6 h-6 fill-current" />
               <span className="font-medium">Avaliação 5 Estrelas</span>
             </div>
-            <div className="flex items-center justify-center gap-3 text-blue-400">
+            <div className="flex items-center justify-center gap-3 text-blue-600">
               <MessageCircle className="w-6 h-6" />
               <span className="font-medium">Conversas Reais</span>
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-green-500/20 to-green-600/20 border border-green-500/30 rounded-xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              💬 Junte-se a Milhares de Clientes Satisfeitos!
+          <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+              Junte-se a Milhares de Clientes Satisfeitos!
             </h3>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-600 mb-6">
               Não perca tempo e dinheiro com múltiplas assinaturas. Tenha acesso a tudo que precisa em um só lugar.
             </p>
             <button 
@@ -318,7 +318,7 @@ const TestimonialsSection = () => {
                   element.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="bg-gradient-to-r from-green-500 to-green-600 text-white font-bold text-lg px-10 py-4 rounded-full hover:from-green-600 hover:to-green-700 transform hover:scale-105 transition-all duration-300 shadow-2xl"
+              className="bg-blue-600 text-white font-semibold text-lg px-10 py-4 rounded-full hover:bg-blue-700 transition-colors duration-300 shadow-lg"
             >
               COMEÇAR AGORA
             </button>

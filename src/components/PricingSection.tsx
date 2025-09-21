@@ -5,73 +5,66 @@ import { redirectWithParams, trackUTMifyEvent } from '../utils/urlUtils';
 const PricingSection = () => {
   const plans = [
     {
+      name: 'Plano Intermediário',
+      price: '21,90',
+      originalPrice: '39,90',
+      duration: 'mês',
+      description: 'Mais vendido - Melhor custo-benefício',
+      features: [
+        'Tudo do Plano Básico',
+        'Apps mais famosos: Netflix, Disney+, HBO',
+        'Adobe Creative Suite',
+        '250+ ferramentas adicionais',
+        'MidJourney, Leonardo AI, Grammarly',
+        'Notion Pro e muito mais',
+        'Acesso ilimitado',
+        'Suporte WhatsApp 24h',
+        '7 dias de garantia'
+      ],
+      popular: true,
+      color: 'from-blue-500 to-blue-600'
+    },
+    {
+      name: 'Plano Master',
+      price: '27,00',
+      originalPrice: '49,90',
+      duration: 'mês',
+      description: 'O mais completo - Para quem quer escalar',
+      features: [
+        'Tudo do Plano Intermediário',
+        'Todas as ferramentas disponíveis',
+        'VO3 (IA gera vídeos infinitos)',
+        'IA cria e posta em 10+ contas',
+        'TikTok e YouTube automatizados',
+        'Suporte VIP com chamada de voz',
+        'Fura-fila no atendimento',
+        'Garantia de 14 dias',
+        'Atualizações em tempo real'
+      ],
+      popular: false,
+      color: 'from-purple-500 to-purple-600',
+      premium: true
+    },
+    {
       name: 'Plano Básico',
       price: '8,90',
       originalPrice: '19,90',
       duration: 'mês',
       description: 'Ideal para iniciantes',
       features: [
-        'Acesso a 100+ ferramentas',
-        'Suporte via email',
-        '7 dias de garantia',
-        'Atualizações regulares'
+        'ChatGPT Plus',
+        'Canva Pro',
+        'Spotify Premium',
+        'YouTube Premium',
+        '⚠️ Acesso limitado (servidor compartilhado)',
+        '⚠️ Pode ter lentidão e travamentos',
+        '⚠️ Suporte básico (resposta em 48h)',
+        '⚠️ Sem atualizações em tempo real',
+        '7 dias de garantia'
       ],
       popular: false,
-      color: 'from-blue-500 to-blue-600'
-    },
-    {
-      name: 'Plano Premium',
-      price: '19,90',
-      originalPrice: '39,90',
-      duration: 'mês',
-      description: 'Mais vendido - Melhor custo-benefício',
-      features: [
-        'Acesso a 500+ ferramentas',
-        'Suporte prioritário 24/7',
-        '7 dias de garantia',
-        'Atualizações em tempo real',
-        'Acesso a novos lançamentos',
-        'Bonus: Curso de Marketing Digital'
-      ],
-      popular: true,
-      color: 'from-yellow-500 to-yellow-600'
-    },
-    {
-      name: 'Plano Master',
-      price: '27,00',
-      originalPrice: '67,00',
-      duration: 'mês',
-      description: 'O plano mais completo - Para profissionais',
-      features: [
-        'Tudo do Plano Premium',
-        'Voz infinita (Vo3)',
-        'IA que cria conteúdo infinito',
-        'Gerencia 10+ contas no TikTok',
-        'Gerencia 10+ contas no YouTube',
-        'Suporte VIP 24/7',
-        'Garantia de 7 dias',
-        'Atualizações em tempo real'
-      ],
-      popular: false,
-      color: 'from-red-500 to-red-600'
-    },
-    {
-      name: 'Plano Vitalício',
-      price: '197,00',
-      originalPrice: '497,00',
-      duration: 'pagamento único',
-      description: 'Melhor investimento a longo prazo',
-      features: [
-        'Acesso VITALÍCIO a todas as ferramentas',
-        'Suporte VIP prioritário',
-        'Garantia estendida de 30 dias',
-        'Primeira a receber novidades',
-        'Acesso a comunidade exclusiva',
-        'Bonus: 3 Cursos premium',
-        'Consultoria gratuita de 1 hora'
-      ],
-      popular: false,
-      color: 'from-purple-500 to-purple-600'
+      color: 'from-gray-500 to-gray-600',
+      warning: true
     }
   ];
 
@@ -87,13 +80,17 @@ const PricingSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
             <div 
               key={index}
               className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:transform hover:scale-105 ${
                 plan.popular 
                   ? 'border-yellow-400 ring-2 ring-yellow-400/50' 
+                  : plan.premium
+                  ? 'border-purple-400 ring-4 ring-purple-400/60 bg-gradient-to-br from-purple-900/20 to-pink-900/20 shadow-2xl shadow-purple-500/25'
+                  : plan.warning
+                  ? 'border-gray-500/50 ring-1 ring-gray-500/30'
                   : 'border-white/10 hover:border-white/20'
               }`}
             >
@@ -102,6 +99,23 @@ const PricingSection = () => {
                   <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-bold px-6 py-2 rounded-full text-sm flex items-center gap-2">
                     <Crown className="w-4 h-4" />
                     MAIS VENDIDO
+                  </div>
+                </div>
+              )}
+              
+              {plan.premium && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-gradient-to-r from-purple-600 to-purple-700 text-white font-bold px-6 py-2 rounded-full text-sm flex items-center gap-2 shadow-lg">
+                    <Crown className="w-4 h-4" />
+                    PREMIUM
+                  </div>
+                </div>
+              )}
+              
+              {plan.warning && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-gray-600 text-white font-medium px-4 py-1 rounded-full text-xs flex items-center gap-1">
+                    ⚠️ BÁSICO
                   </div>
                 </div>
               )}
@@ -115,12 +129,14 @@ const PricingSection = () => {
                 </div>
                 
                 <div className="flex items-center justify-center gap-2 mb-2">
-                  <span className="text-4xl font-bold text-white">R$ {plan.price}</span>
+                  <span className={`text-4xl font-bold ${plan.premium ? 'text-purple-300' : 'text-white'}`}>
+                    R$ {plan.price}
+                  </span>
                   <span className="text-gray-400">/ {plan.duration}</span>
                 </div>
                 
-                <div className="bg-red-500/20 border border-red-500/30 rounded-lg p-2 mb-6">
-                  <span className="text-red-300 text-sm font-medium">
+                <div className={`${plan.premium ? 'bg-purple-500/20 border border-purple-400/40' : 'bg-red-500/20 border border-red-500/30'} rounded-lg p-2 mb-6`}>
+                  <span className={`${plan.premium ? 'text-purple-300' : 'text-red-300'} text-sm font-medium`}>
                     🔥 {Math.floor(((parseFloat(plan.originalPrice) - parseFloat(plan.price)) / parseFloat(plan.originalPrice)) * 100)}% OFF
                   </span>
                 </div>
@@ -129,8 +145,14 @@ const PricingSection = () => {
               <ul className="space-y-3 mb-8">
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-300">{feature}</span>
+                    {feature.startsWith('⚠️') ? (
+                      <span className="text-red-400 text-lg mt-0.5 flex-shrink-0">⚠️</span>
+                    ) : (
+                      <Check className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                    )}
+                    <span className={feature.startsWith('⚠️') ? 'text-red-300' : 'text-gray-300'}>
+                      {feature.replace('⚠️ ', '')}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -152,21 +174,34 @@ const PricingSection = () => {
                       button: 'escolher_plano'
                     });
                     // Redirect to appropriate checkout
-                    const checkoutUrl = plan.name === 'Plano Premium' 
-                      ? 'https://pay.cakto.com.br/6krzq2x_576786'
+                    const checkoutUrl = plan.name === 'Plano Intermediário' 
+                      ? 'https://pay.kirvano.com/c5d26cdc-18b9-40ef-af71-04b541f4a2ee'
                       : plan.name === 'Plano Master'
-                      ? 'https://pay.cakto.com.br/urr9shv_576799'
-                      : 'https://pay.cakto.com.br/7vgradj_576782';
+                      ? 'https://pay.kirvano.com/c5d26cdc-18b9-40ef-af71-04b541f4a2ee'
+                      : 'https://pay.kirvano.com/c5d26cdc-18b9-40ef-af71-04b541f4a2ee';
                     redirectWithParams(checkoutUrl);
                   }
                 }}
-                className={`w-full bg-gradient-to-r ${plan.color} text-white font-bold py-4 rounded-xl hover:opacity-90 transform hover:scale-105 transition-all duration-300 shadow-lg`}
+                className={`w-full bg-gradient-to-r ${plan.color} text-white font-bold py-4 rounded-xl transition-all duration-300 shadow-lg ${
+                  plan.warning 
+                    ? 'hover:opacity-80 cursor-not-allowed opacity-75' 
+                    : plan.premium
+                    ? 'hover:opacity-90 transform hover:scale-105 shadow-xl shadow-purple-500/30'
+                    : 'hover:opacity-90 transform hover:scale-105'
+                }`}
               >
                 {plan.popular ? (
                   <span className="flex items-center justify-center gap-2">
                     <Zap className="w-5 h-5" />
                     ESCOLHER PLANO
                   </span>
+                ) : plan.premium ? (
+                  <span className="flex items-center justify-center gap-2">
+                    <Crown className="w-5 h-5" />
+                    ESCOLHER PLANO
+                  </span>
+                ) : plan.warning ? (
+                  'APENAS PARA TESTAR'
                 ) : (
                   'ESCOLHER PLANO'
                 )}
@@ -175,7 +210,7 @@ const PricingSection = () => {
               <div className="mt-4 text-center">
                 <div className="flex items-center justify-center gap-2 text-sm text-gray-400">
                   <Shield className="w-4 h-4" />
-                  <span>Garantia de 7 dias</span>
+                  <span>{plan.name === 'Plano Master' ? 'Garantia de 14 dias' : 'Garantia de 7 dias'}</span>
                 </div>
               </div>
             </div>

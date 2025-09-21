@@ -103,88 +103,85 @@ const UpsellModal = () => {
         {/* Close button */}
         <button
           onClick={closeModal}
-          className="absolute top-2 right-2 md:top-4 md:right-4 z-10 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
+          className="absolute top-2 right-2 md:top-4 md:right-4 z-10 bg-white/90 text-gray-900 p-2 rounded-full hover:bg-white transition-colors shadow-lg"
         >
           <X className="w-6 h-6" />
         </button>
 
         {/* Modal Content */}
-        <div className="bg-gradient-to-b from-purple-900 via-purple-800 to-purple-900 rounded-none md:rounded-2xl p-4 md:p-6 lg:p-8 border-0 md:border border-purple-600/50 shadow-2xl h-full md:h-auto flex flex-col justify-start md:justify-center">
+        <div className="bg-white rounded-none md:rounded-2xl p-4 md:p-6 lg:p-8 border-0 md:border border-gray-200 shadow-2xl h-full md:h-auto flex flex-col justify-start md:justify-center">
           
           {/* PRIMEIRA ETAPA - Oferta Premium R$ 15,90 */}
           {currentStage === 'first' && (
             <>
               {/* Header */}
               <div className="text-center mb-6 md:mb-8 pt-4 md:pt-0">
-                <div className="inline-flex items-center gap-2 bg-red-500 text-white px-3 md:px-4 py-2 rounded-full font-bold text-sm md:text-base mb-4 animate-pulse">
+                <div className="inline-flex items-center gap-2 bg-red-600 text-white px-3 md:px-4 py-2 rounded-full font-semibold text-sm md:text-base mb-4 shadow-lg">
                   <Clock className="w-4 h-4" />
                   <span className="text-xs md:text-sm">OFERTA EXPIRA EM: {formatTime(timeLeft)}</span>
                 </div>
                 
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 leading-tight">
-                  🚨 ESPERE! OFERTA ESPECIAL! 🚨
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 mb-4 leading-tight">
+                  ESPERE! OFERTA ESPECIAL!
                 </h2>
                 
-                <p className="text-lg md:text-xl text-gray-300 mb-4 md:mb-6">
+                <p className="text-lg md:text-xl text-gray-600 mb-4 md:mb-6">
                   Antes de finalizar, que tal uma oferta imperdível?
                 </p>
 
                 {/* Escassez */}
-                <div className="bg-red-500/20 border border-red-500/50 rounded-lg p-3 mb-4 md:mb-6">
-                  <div className="flex items-center justify-center gap-2 text-red-300">
-                    <AlertTriangle className="w-5 h-5 animate-pulse" />
-                    <span className="font-bold text-sm md:text-base">APENAS 7 VAGAS RESTANTES HOJE!</span>
+                <div className="bg-red-50 border border-red-200 rounded-lg p-3 mb-4 md:mb-6">
+                  <div className="flex items-center justify-center gap-2 text-red-700">
+                    <AlertTriangle className="w-5 h-5" />
+                    <span className="font-semibold text-sm md:text-base">APENAS 7 VAGAS RESTANTES HOJE!</span>
                   </div>
                 </div>
               </div>
 
               {/* Oferta Especial */}
               <div className="relative mb-6 md:mb-8">
-                {/* Glowing border effect */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 rounded-xl blur-sm animate-pulse"></div>
-                
                 {/* Premium badge */}
                 <div className="absolute -top-3 md:-top-4 left-1/2 transform -translate-x-1/2 z-20">
-                  <div className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-black px-3 md:px-4 py-1 rounded-full text-xs md:text-sm font-bold shadow-2xl border-2 border-yellow-300 animate-bounce">
+                  <div className="bg-blue-600 text-white px-3 md:px-4 py-1 rounded-full text-xs md:text-sm font-semibold shadow-lg">
                     <Crown className="w-4 h-4 inline mr-1" />
                     OFERTA ESPECIAL
                   </div>
                 </div>
 
-                <div className="relative bg-gradient-to-b from-purple-800 via-purple-700 to-purple-900 rounded-xl p-4 md:p-6 lg:p-8 border-2 border-yellow-400/50 shadow-2xl">
+                <div className="relative bg-gray-50 rounded-xl p-4 md:p-6 lg:p-8 border-2 border-blue-200 shadow-lg">
                   <div className="text-center mb-4 md:mb-6">
-                    <h3 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 bg-clip-text text-transparent mb-3 md:mb-4">
+                    <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-3 md:mb-4">
                       Plano Premium Completo
                     </h3>
                     <div className="mb-3 md:mb-4">
-                      <span className="text-red-400 line-through text-xl md:text-2xl font-bold">R$ 19,90</span>
+                      <span className="text-gray-400 line-through text-xl md:text-2xl font-semibold">R$ 19,90</span>
                     </div>
-                    <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 bg-clip-text text-transparent mb-3 md:mb-4">
+                    <div className="text-4xl md:text-5xl font-semibold text-blue-600 mb-3 md:mb-4">
                       R$ 15,90
                     </div>
-                    <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-3 md:px-4 py-2 rounded-full text-sm md:text-base font-bold inline-block mb-4 md:mb-6">
-                      💰 ECONOMIZE R$ 4,00
+                    <div className="bg-green-100 border border-green-200 text-green-700 px-3 md:px-4 py-2 rounded-full text-sm md:text-base font-semibold inline-block mb-4 md:mb-6">
+                      ECONOMIZE R$ 4,00
                     </div>
                   </div>
 
                   {/* Principais categorias em destaque */}
                   <div className="mb-4 md:mb-6">
                     <div className="grid grid-cols-2 gap-2 md:gap-3 mb-4">
-                      <div className="bg-gradient-to-r from-red-500/20 to-red-600/20 border border-red-500/30 rounded-lg p-2 text-center">
-                        <span className="text-red-300 font-bold text-xs md:text-sm">🎬 STREAMING</span>
-                        <p className="text-white text-xs mt-1">Netflix, Disney+, HBO+</p>
+                      <div className="bg-red-50 border border-red-200 rounded-lg p-2 text-center">
+                        <span className="text-red-700 font-semibold text-xs md:text-sm">STREAMING</span>
+                        <p className="text-gray-600 text-xs mt-1">Netflix, Disney+, HBO+</p>
                       </div>
-                      <div className="bg-gradient-to-r from-blue-500/20 to-blue-600/20 border border-blue-500/30 rounded-lg p-2 text-center">
-                        <span className="text-blue-300 font-bold text-xs md:text-sm">🎨 DESIGN</span>
-                        <p className="text-white text-xs mt-1">Canva, Adobe, Figma</p>
+                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-2 text-center">
+                        <span className="text-blue-700 font-semibold text-xs md:text-sm">DESIGN</span>
+                        <p className="text-gray-600 text-xs mt-1">Canva, Adobe, Figma</p>
                       </div>
-                      <div className="bg-gradient-to-r from-purple-500/20 to-purple-600/20 border border-purple-500/30 rounded-lg p-2 text-center">
-                        <span className="text-purple-300 font-bold text-xs md:text-sm">🤖 IA</span>
-                        <p className="text-white text-xs mt-1">ChatGPT, Midjourney</p>
+                      <div className="bg-purple-50 border border-purple-200 rounded-lg p-2 text-center">
+                        <span className="text-purple-700 font-semibold text-xs md:text-sm">IA</span>
+                        <p className="text-gray-600 text-xs mt-1">ChatGPT, Midjourney</p>
                       </div>
-                      <div className="bg-gradient-to-r from-green-500/20 to-green-600/20 border border-green-500/30 rounded-lg p-2 text-center">
-                        <span className="text-green-300 font-bold text-xs md:text-sm">🎵 MÚSICA</span>
-                        <p className="text-white text-xs mt-1">Spotify, YouTube</p>
+                      <div className="bg-green-50 border border-green-200 rounded-lg p-2 text-center">
+                        <span className="text-green-700 font-semibold text-xs md:text-sm">MÚSICA</span>
+                        <p className="text-gray-600 text-xs mt-1">Spotify, YouTube</p>
                       </div>
                     </div>
                     
@@ -339,21 +336,21 @@ const UpsellModal = () => {
                   {/* Principais categorias em destaque */}
                   <div className="mb-4 md:mb-6">
                     <div className="grid grid-cols-2 gap-2 md:gap-3 mb-4">
-                      <div className="bg-gradient-to-r from-red-500/20 to-red-600/20 border border-red-500/30 rounded-lg p-2 text-center">
-                        <span className="text-red-300 font-bold text-xs md:text-sm">🎬 STREAMING</span>
-                        <p className="text-white text-xs mt-1">Netflix, Disney+, HBO+</p>
+                      <div className="bg-red-50 border border-red-200 rounded-lg p-2 text-center">
+                        <span className="text-red-700 font-semibold text-xs md:text-sm">STREAMING</span>
+                        <p className="text-gray-600 text-xs mt-1">Netflix, Disney+, HBO+</p>
                       </div>
-                      <div className="bg-gradient-to-r from-blue-500/20 to-blue-600/20 border border-blue-500/30 rounded-lg p-2 text-center">
-                        <span className="text-blue-300 font-bold text-xs md:text-sm">🎨 DESIGN</span>
-                        <p className="text-white text-xs mt-1">Canva, Adobe, Figma</p>
+                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-2 text-center">
+                        <span className="text-blue-700 font-semibold text-xs md:text-sm">DESIGN</span>
+                        <p className="text-gray-600 text-xs mt-1">Canva, Adobe, Figma</p>
                       </div>
-                      <div className="bg-gradient-to-r from-purple-500/20 to-purple-600/20 border border-purple-500/30 rounded-lg p-2 text-center">
-                        <span className="text-purple-300 font-bold text-xs md:text-sm">🤖 IA</span>
-                        <p className="text-white text-xs mt-1">ChatGPT, Midjourney</p>
+                      <div className="bg-purple-50 border border-purple-200 rounded-lg p-2 text-center">
+                        <span className="text-purple-700 font-semibold text-xs md:text-sm">IA</span>
+                        <p className="text-gray-600 text-xs mt-1">ChatGPT, Midjourney</p>
                       </div>
-                      <div className="bg-gradient-to-r from-green-500/20 to-green-600/20 border border-green-500/30 rounded-lg p-2 text-center">
-                        <span className="text-green-300 font-bold text-xs md:text-sm">🎵 MÚSICA</span>
-                        <p className="text-white text-xs mt-1">Spotify, YouTube</p>
+                      <div className="bg-green-50 border border-green-200 rounded-lg p-2 text-center">
+                        <span className="text-green-700 font-semibold text-xs md:text-sm">MÚSICA</span>
+                        <p className="text-gray-600 text-xs mt-1">Spotify, YouTube</p>
                       </div>
                     </div>
                     
@@ -513,21 +510,21 @@ const UpsellModal = () => {
                   {/* Principais categorias em destaque */}
                   <div className="mb-4 md:mb-6">
                     <div className="grid grid-cols-2 gap-2 md:gap-3 mb-4">
-                      <div className="bg-gradient-to-r from-red-500/20 to-red-600/20 border border-red-500/30 rounded-lg p-2 text-center">
-                        <span className="text-red-300 font-bold text-xs md:text-sm">🎬 STREAMING</span>
-                        <p className="text-white text-xs mt-1">Netflix, Disney+, HBO+</p>
+                      <div className="bg-red-50 border border-red-200 rounded-lg p-2 text-center">
+                        <span className="text-red-700 font-semibold text-xs md:text-sm">STREAMING</span>
+                        <p className="text-gray-600 text-xs mt-1">Netflix, Disney+, HBO+</p>
                       </div>
-                      <div className="bg-gradient-to-r from-blue-500/20 to-blue-600/20 border border-blue-500/30 rounded-lg p-2 text-center">
-                        <span className="text-blue-300 font-bold text-xs md:text-sm">🎨 DESIGN</span>
-                        <p className="text-white text-xs mt-1">Canva, Adobe, Figma</p>
+                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-2 text-center">
+                        <span className="text-blue-700 font-semibold text-xs md:text-sm">DESIGN</span>
+                        <p className="text-gray-600 text-xs mt-1">Canva, Adobe, Figma</p>
                       </div>
-                      <div className="bg-gradient-to-r from-purple-500/20 to-purple-600/20 border border-purple-500/30 rounded-lg p-2 text-center">
-                        <span className="text-purple-300 font-bold text-xs md:text-sm">🤖 IA AVANÇADA</span>
-                        <p className="text-white text-xs mt-1">Cria conteúdo infinito</p>
+                      <div className="bg-purple-50 border border-purple-200 rounded-lg p-2 text-center">
+                        <span className="text-purple-700 font-semibold text-xs md:text-sm">IA AVANÇADA</span>
+                        <p className="text-gray-600 text-xs mt-1">Cria conteúdo infinito</p>
                       </div>
-                      <div className="bg-gradient-to-r from-green-500/20 to-green-600/20 border border-green-500/30 rounded-lg p-2 text-center">
-                        <span className="text-green-300 font-bold text-xs md:text-sm">📱 REDES SOCIAIS</span>
-                        <p className="text-white text-xs mt-1">10+ contas TikTok/YT</p>
+                      <div className="bg-green-50 border border-green-200 rounded-lg p-2 text-center">
+                        <span className="text-green-700 font-semibold text-xs md:text-sm">📱 REDES SOCIAIS</span>
+                        <p className="text-gray-600 text-xs mt-1">10+ contas TikTok/YT</p>
                       </div>
                     </div>
                     

@@ -28,10 +28,10 @@ const FAQSection = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-gradient-to-b from-black to-purple-900">
+    <section className="py-20 bg-gradient-to-b from-black to-gray-900">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-light text-white mb-6">
             Perguntas Frequentes
           </h2>
         </div>
@@ -40,28 +40,28 @@ const FAQSection = () => {
           {faqs.map((faq, index) => (
             <div 
               key={index}
-              className="bg-purple-800/30 backdrop-blur-sm rounded-xl border border-purple-700/50 overflow-hidden"
+              className="bg-white rounded-xl border border-gray-200 shadow-lg overflow-hidden"
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-purple-700/20 transition-colors duration-200"
+                className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
                 type="button"
               >
-                <span className="text-white font-medium text-lg pr-4">
+                <span className="text-gray-900 font-medium text-lg pr-4">
                   {faq.question}
                 </span>
                 <div className="flex-shrink-0">
                   {openIndex === index ? (
-                    <ChevronUp className="w-5 h-5 text-white" />
+                    <ChevronUp className="w-5 h-5 text-gray-600" />
                   ) : (
-                    <ChevronDown className="w-5 h-5 text-white" />
+                    <ChevronDown className="w-5 h-5 text-gray-600" />
                   )}
                 </div>
               </button>
               
               {openIndex === index && (
                 <div className="px-6 pb-5 animate-fadeIn">
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-gray-600 leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
