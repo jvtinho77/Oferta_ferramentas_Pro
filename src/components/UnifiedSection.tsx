@@ -304,7 +304,7 @@ const UnifiedSection = () => {
     });
     setShowDownsell(false);
     // Redirecionar para o plano básico
-    const checkoutUrl = 'https://pay.kirvano.com/c5d26cdc-18b9-40ef-af71-04b541f4a2ee';
+    const checkoutUrl = 'https://pay.cakto.com.br/7vgradj_576782';
     redirectWithParams(checkoutUrl);
   };
 
